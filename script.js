@@ -10,9 +10,8 @@ btn.addEventListener('click', () => {
     
     
     let inputSort = '';
-    let inputStr = new String(input.value);
     
-    let inputArr = [...inputStr].sort();
+    let inputArr = [...input.value].sort();
     inputArr.forEach(str => {
         inputSort += str;
     });
