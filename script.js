@@ -1,0 +1,30 @@
+
+//Getting the Elements
+
+let input = document.getElementById("input-element");
+let btn = document.getElementById("btn");
+let container = document.querySelector(".container");
+
+
+btn.addEventListener('click', () => {
+    
+    
+    let inputSort = '';
+    let inputStr = new String(input.value);
+    
+    let inputArr = [...inputStr].sort();
+    inputArr.forEach(str => {
+        inputSort += str;
+    });
+    
+    let div = document.createElement("div");
+
+    div.className = "sort-result"
+
+
+    container.after(div);
+
+    const textNode = document.createTextNode(inputSort);
+    div.append(textNode);
+    
+});
